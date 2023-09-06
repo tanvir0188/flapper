@@ -1,0 +1,2 @@
+- unzip the file
+- open the `index.html` file with any modern web browser

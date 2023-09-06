@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Flapper</title>
+    <meta name="title" content="Flapper: A 2D game project" />
+    <meta
+      name="description"
+      content="CSE246(Algorithms) course final project. Submitted to Dr. Md. Ashraf Uddin. Created by Ishmam-ur-Rahman, Saidur Rahman Shemanto, Mushfiqul Islam, and Md Arnob Tanvir."
+    />
+    <link rel="stylesheet" type="text/css" media="screen" href="./style.css" />
+  </head>
+
+  <body>
+    <noscript>
+      Need to have javascript enabled
+    </noscript>
+
+
+    <canvas id="canvas"> </canvas>
+    <div id="score">0</div>
+
+    <div id="gameOverModal">
+      Game over.
+      <br />
+      Your score is <span id="gameOverScore">0</span>
+    </div>
+
+    <!-- About modal -->
+    <div id="aboutModal">
+      <h1>Flapper</h2>
+      <h3>CSE246(Algorithms) course final project</h3>
+      <p>
+        <b>Created by</b>
+        <br />
+        Ishmam-ur-Rahman (2020-1-60-241)<br />
+        Saidur Rahman Shemanto (2020-1-60-242)<br />
+        Mushfiqul Islam (2020-1-60-261)<br />
+        Md Arnob Tanvir (2020-1-60-220)
+      </p>
+      <br />
+      <p><b>Submitted to</b><br /> Dr. Md. Ashraf Uddin.</p>
+
+      <br />
+
+      <h3>How to play:</h3>
+      <p>Press <kbd>&#8594</kbd> to go right</p>
+      <p>Press <kbd>&#8593</kbd> or <kbd>space_bar</kbd>  to flap/go up</p>
+      <p>Press <kbd>M</kbd>  to toggle music</p>
+      <p>Press <kbd>B</kbd>  to toggle bare bone</p>
+
+      <br />
+
+      <button id="closeAboutModal">Close</button>
+    </div>
+    <button id="openAboutModal">?</button>
+
+    <button id="flap"></button>
+    <button id="goRight"></button>
+
+    <audio
+      id="bgAudio"
+      src="./Undertale-OST-023-Shop-1.mp3"
+      autoplay
+      loop
+    ></audio>
+    <audio id="crash" src="./crash.wav"></audio>
+
+    <!-- background images -->
+    <img id="bgLayer1" style="display: none" src="./parallax/foreground.png" />
+    <img
+      id="bgLayer2"
+      style="display: none"
+      src="./parallax/back-buildings.png"
+    />
+    <img
+      id="bgLayer3"
+      style="display: none"
+      src="./parallax/far-buildings.png"
+    />
+
+    <!-- pipe images -->
+    <img id="goldPipeTop" style="display: none" src="./pipes/goldPipeTop.png" />
+    <img id="goldPipeMid" style="display: none" src="./pipes/goldPipeMid.png" />
+    <img
+      id="goldPipeBottom"
+      style="display: none"
+      src="./pipes/goldPipeBottom.png"
+    />
+    <img
+      id="purplePipeTop"
+      style="display: none"
+      src="./pipes/purplePipeTop.png"
+    />
+    <img
+      id="purplePipeMid"
+      style="display: none"
+      src="./pipes/purplePipeMid.png"
+    />
+    <img
+      id="purplePipeBottom"
+      style="display: none"
+      src="./pipes/purplePipeBottom.png"
+    />
+
+    <script src="./utils.js"></script>
+    <script src="./constants.js"></script>
+    <script src="./flapper.js"></script>
+    <script src="./particle.js"></script>
+    <script src="./obstacle.js"></script>
+    <script src="./background.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
